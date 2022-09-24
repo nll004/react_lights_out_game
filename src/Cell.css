@@ -1,10 +1,15 @@
 .Cell {
   height: 100px;
   width: 100px;
-  background-color: darkgray;
+  background-image: radial-gradient(rgb(40, 40, 40), rgb(60, 60, 60) );
   cursor: pointer;
 }
 
 .Cell-lit {
-  background-color: white;
+  background-image: url(bulb_on.svg);
+  background-color: rgb(252, 252, 176);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  border: 2px solid black;
 }

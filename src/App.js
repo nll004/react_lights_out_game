@@ -7,7 +7,18 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Board nrows={4} ncols={5} />
+      <div className="container">
+        <h1>Lights Out</h1>
+        <p>Select a cell to toggle lights</p>
+        <p>Wasting electricity is not great! Turn all of the lights out to win!</p>
+      </div>
+      <div className="Board">
+        <table className="Board-table">
+          <tbody>
+            <Board nrows={5} ncols={5} />
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
