@@ -15,7 +15,7 @@ function App() {
       <div className="Board">
         <table className="Board-table">
           <tbody>
-            <Board nrows={5} ncols={5} />
+            <Board nrows={6} ncols={6} chanceLightStartsOn={.1}/>
           </tbody>
         </table>
       </div>

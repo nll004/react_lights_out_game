@@ -46,11 +46,12 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
     return initialBoard;
   }
 
+  /** checks for win. Wins if board values are all false meaning all lights are off */
   function hasWon() {
-    console.log('hasWon func checked', board)
-    return board.map(r=>r.every(val => val === false))
+    alert("Horray! All lights are off!")
   }
 
+  /** updates board in state with setBoard. returns a deep copy of board with modified values */
   function flipCellsAround(coord) {
 
     setBoard(oldBoard => {
@@ -77,9 +78,10 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
     });
   }
 
-  // if the game is won, just show a winning msg & render nothing else
-  // if (hasWon){
-  //   return alert("Horray! All lights are off!")
+  // if all lights are off, you win
+    if (board.flat().every(e => e === false)) {
+      hasWon()
+    }
   // }
 
   return (
@@ -88,7 +90,6 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
         { r.map((c,x) =>
             <Cell isLit={c}
                   key={`${x}-${y}`}
-                  id={`${x}-${y}`}
                   coord={`${x}-${y}`}
                   flipCellsAround={flipCellsAround}
             />
