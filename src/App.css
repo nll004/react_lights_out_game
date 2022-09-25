@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-}
-
-.Board {
+  display: flex;
+  justify-content: center;
 }
